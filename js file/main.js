@@ -28,12 +28,24 @@ for (let seat of allSeat) {
 
         // selectedSeatDetails a jei jei seat select koresi ta append korbo.
         const selectedSeatDetails = document.getElementById("selectedSeatDetails");
-        const newLi = document.createElement("li");
-        newLi.innerHTML = `
-        ${seatText} &nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  Economoy
-        &nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  550
-        `
-        selectedSeatDetails.appendChild(newLi)
+        const newDiv = document.createElement("div");
+        newDiv.classList.add('flex');
+        newDiv.classList.add('justify-between');
+
+        const newP1 = document.createElement("p");
+        newP1.innerText = seatText;
+        newDiv.appendChild(newP1);
+
+        const newP2 = document.createElement("p");
+        newP2.innerText = " Economoy";
+        newDiv.appendChild(newP2);
+
+        const newP3 = document.createElement("p");
+        newP3.innerText = "550";
+        newDiv.appendChild(newP3)
+        
+
+        selectedSeatDetails.appendChild(newDiv)
 
         // Total price sum
         const totalPrice = document.getElementById("totalPrice").innerText;
@@ -66,22 +78,48 @@ for (let seat of allSeat) {
 
         // coupon code buttom inable 
         const couponButtom = document.getElementById("couponButtom");
-        if(selectedSeat === 4){
+        if (selectedSeat === 4) {
             couponButtom.removeAttribute('disabled', true)
         }
 
         // coupon code er input field 
-        const couponInput = document.getElementById("couponInput").value;
+        const couponDiv = document.getElementById("coupon");
+
         couponButtom.addEventListener("click", function(){
+            const couponInput = document.getElementById("couponInput").value;
             if(couponInput === "NEW15"){
-                
+                const totalPrice = document.getElementById("totalPrice").innerText;
+                const totalPriceInt = parseInt(totalPrice);
+                const discount15 = (totalPriceInt * 15) / 100;
+
+                const updateGrandTotal = totalPriceInt - discount15;
+                setInnerText("grandPrice", updateGrandTotal);
+               
+                couponDiv.classList.add('hidden')
+            }
+            else if(couponInput === "Couple 20"){
+                const totalPrice = document.getElementById("totalPrice").innerText;
+                const totalPriceInt = parseInt(totalPrice);
+                const discount20 = (totalPriceInt * 20) / 100;
+
+                const updateGrandTotal = totalPriceInt - discount20;
+                setInnerText("grandPrice", updateGrandTotal);
+
+                couponDiv.classList.add('hidden')
+            }
+            else{
+                alert("Invalid Coupon Code !")
             }
         })
 
 
+        
+
+        
     })
 
 
-
+    
 
 }
+
