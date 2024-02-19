@@ -14,6 +14,8 @@
         rel="stylesheet">
 
 
+    <link rel="shortcut icon" href="./images/stoppage.png" type="image/x-icon">
+
     <!-- tailwind and daisy ui cdn link  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -491,7 +493,7 @@
                         stroke-opacity="0.300000" stroke-width="2.000000" stroke-dasharray="5.000000,5.000000" />
                 </svg>
                 <!-- seat right part  -->
-                <div class="font-medium font-[inter] mt-7 lg:mt-[0px] text-[16px] ">
+                <div class="font-medium font-[inter] mt-7 lg:mt-[0px] text-[16px] w-[100%] lg:w-[40%]">
 
 
                     <h3 class="font-semibold text-[24px] mb-4 lg:mb-[0px] text-[#030712]">Select Your Seat</h3>
@@ -517,11 +519,13 @@
 
                         <hr class="my-3">
 
-                        <div id="coupon" class="flex justify-between ">
+                        <div id="coupon" class="flex justify-between relative">
                             <input id="couponInput" type="text" placeholder="Have any Coupon?"
-                                class="input input-bordered input-md w-full max-w-xs" />
-                            <button id="couponButtom" class="btn text-[16px] font-medium text-[#FFF] bg-[#1DD100]"
-                                disabled>Button</button>
+                                class="input input-bordered input-md w-full  h-[55px]" />
+                            <button id="couponButtom" class="btn btn-sm text-[16px] font-medium text-[#FFF] bg-[#1DD100] absolute right-2 top-[6px] h-11 w-[80px]"
+                                disabled>Apply</button>
+                             
+
 
                         </div>
 
@@ -595,7 +599,7 @@
                 <p class="text-[20px] font-semibold mb-7 my-4 lg:my-0"> Download our app </p>
 
 
-                <div class="flex gap-3">
+                <div class="flex gap-3 border-2 p-[10px] bg-[#000000] rounded-xl">
                     <img src="./images/playstore.png" alt="">
 
                     <svg width="118.692017" height="38.358276" viewBox="0 0 118.692 38.3583" fill="none"
@@ -618,7 +622,7 @@
 
             </div>
         </div>
-        <hr class="border-dotted my-9">
+        <hr class="border-dashed my-9">
         <div class="flex flex-col lg:flex-row items-center justify-between">
             <p>@all rights reserved, P-Ticket services limited.2024</p>
             <ul class="flex flex-row gap-6 font-normal text-[#FFFFFF]">
