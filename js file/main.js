@@ -2,6 +2,7 @@ let totalSeatNum = 40;
 let selectedSeat = 0;
 const allSeat = document.getElementsByClassName("seat");
 
+let invalidCoupon = 0;
 
 for (let seat of allSeat) {
 
@@ -9,7 +10,7 @@ for (let seat of allSeat) {
 
         // 4 tar besi seat select korle alert diba and return korbe
         if (selectedSeat === 4) {
-            alert("You are already selected 4 seats !");
+            alert("You have already selected 4 seats!");
             return;
         }
 
@@ -65,12 +66,16 @@ for (let seat of allSeat) {
         const phoneNumberInput = document.getElementById("phoneNumberInput");
         phoneNumberInput.addEventListener("keyup", function (event) {
             const numberOfDigit = event.target.value.length;
+            console.log(numberOfDigit)
 
             const nextButton = document.getElementById("nextButton");
             if (selectedSeat > 0 && numberOfDigit > 0 && numberOfDigit < 12) {
                 nextButton.removeAttribute("disabled")
             }
             else if (numberOfDigit > 11) {
+                nextButton.setAttribute("disabled", true)
+            }
+            else{
                 nextButton.setAttribute("disabled", true)
             }
         })
@@ -108,7 +113,13 @@ for (let seat of allSeat) {
                 couponDiv.classList.add('hidden')
             }
             else{
-                alert("Invalid Coupon Code !")
+                invalidCoupon++;
+                if(invalidCoupon === 4){
+
+                    alert("Invalid Coupon Code !")
+                     document.getElementById("couponInput").value = "";
+                   
+                }
             }
         })
 
