@@ -65,23 +65,23 @@ for (let seat of allSeat) {
         seat.setAttribute("disabled", true)
 
 
-        // Next button for modal
-        const phoneNumberInput = document.getElementById("phoneNumberInput");
-        phoneNumberInput.addEventListener("keyup", function (event) {
-            const numberOfDigit = event.target.value.length;
+        // // Next button for modal
+        // const phoneNumberInput = document.getElementById("phoneNumberInput");
+        // phoneNumberInput.addEventListener("keyup", function (event) {
+        //     const numberOfDigit = event.target.value.length;
 
 
-            const nextButton = document.getElementById("nextButton");
-            if (selectedSeat > 0 && numberOfDigit > 0 && numberOfDigit < 12) {
-                nextButton.removeAttribute("disabled")
-            }
-            else if (numberOfDigit > 11) {
-                nextButton.setAttribute("disabled", true)
-            }
-            else {
-                nextButton.setAttribute("disabled", true)
-            }
-        })
+        //     const nextButton = document.getElementById("nextButton");
+        //     if (selectedSeat > 0 && numberOfDigit > 0 && numberOfDigit < 12) {
+        //         nextButton.removeAttribute("disabled")
+        //     }
+        //     else if (numberOfDigit > 11) {
+        //         nextButton.setAttribute("disabled", true)
+        //     }
+        //     else {
+        //         nextButton.setAttribute("disabled", true)
+        //     }
+        // })
 
 
         // coupon code buttom inable 
@@ -189,9 +189,31 @@ for (let seat of allSeat) {
 
 
 
-// const pageReload = document.getElementById("reloadPage")
-// pageReload.addEventListener("click", function(){
-//     location.reload();
-// })
+ // Next button for modal
+ const phoneNumberInput = document.getElementById("phoneNumberInput");
+ phoneNumberInput.addEventListener("keyup", function (event) {
+     const numberOfDigit = event.target.value.length;
+
+
+     const nextButton = document.getElementById("nextButton");
+     if (selectedSeat > 0 && numberOfDigit > 0 && numberOfDigit < 12) {
+         nextButton.removeAttribute("disabled")
+     }
+     else if (numberOfDigit > 11) {
+         nextButton.setAttribute("disabled", true)
+     }
+     else {
+         nextButton.setAttribute("disabled", true)
+     }
+ })
+
+
+
+
+
+const pageReload = document.getElementById("reloadPage")
+pageReload.addEventListener("click", function(){
+    location.reload();
+})
 
 
