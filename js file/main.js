@@ -3,6 +3,7 @@ let selectedSeat = 0;
 const allSeat = document.getElementsByClassName("seat");
 
 let invalidCoupon = 0;
+let discountedCount = 0;
 
 for (let seat of allSeat) {
 
@@ -44,9 +45,11 @@ for (let seat of allSeat) {
         const newP3 = document.createElement("p");
         newP3.innerText = "550";
         newDiv.appendChild(newP3)
-        
+
 
         selectedSeatDetails.appendChild(newDiv)
+
+
 
         // Total price sum
         const totalPrice = document.getElementById("totalPrice").innerText;
@@ -66,7 +69,7 @@ for (let seat of allSeat) {
         const phoneNumberInput = document.getElementById("phoneNumberInput");
         phoneNumberInput.addEventListener("keyup", function (event) {
             const numberOfDigit = event.target.value.length;
-            console.log(numberOfDigit)
+
 
             const nextButton = document.getElementById("nextButton");
             if (selectedSeat > 0 && numberOfDigit > 0 && numberOfDigit < 12) {
@@ -75,7 +78,7 @@ for (let seat of allSeat) {
             else if (numberOfDigit > 11) {
                 nextButton.setAttribute("disabled", true)
             }
-            else{
+            else {
                 nextButton.setAttribute("disabled", true)
             }
         })
@@ -90,19 +93,46 @@ for (let seat of allSeat) {
         // coupon code er input field 
         const couponDiv = document.getElementById("coupon");
 
-        couponButtom.addEventListener("click", function(){
+        couponButtom.addEventListener("click", function () {
             const couponInput = document.getElementById("couponInput").value;
-            if(couponInput === "NEW15"){
+            if (couponInput === "NEW15") {
                 const totalPrice = document.getElementById("totalPrice").innerText;
                 const totalPriceInt = parseInt(totalPrice);
                 const discount15 = (totalPriceInt * 15) / 100;
 
                 const updateGrandTotal = totalPriceInt - discount15;
                 setInnerText("grandPrice", updateGrandTotal);
-               
-                couponDiv.classList.add('hidden')
+
+
+
+
+
+                //   discountdPrice a append korbo
+                const discountdPrice = document.getElementById("discountdPrice");
+                const newDivDis = document.createElement("div");
+                newDivDis.classList.add('flex');
+                newDivDis.classList.add('justify-between');
+
+
+                const newP2Dis = document.createElement("p");
+                newP2Dis.innerText = " Discounted Price";
+                newDivDis.appendChild(newP2Dis);
+
+                const newP1Dis = document.createElement("p");
+                newP1Dis.innerText ="BDT " + discount15;
+                newDivDis.appendChild(newP1Dis);
+
+
+                discountedCount++;
+                if (discountedCount === 4) {
+                    discountdPrice.appendChild(newDivDis)
+                }
+
+                //   discountdPrice a append kora ses
+
+                couponDiv.classList.add('hidden');
             }
-            else if(couponInput === "Couple 20"){
+            else if (couponInput === "Couple 20") {
                 const totalPrice = document.getElementById("totalPrice").innerText;
                 const totalPriceInt = parseInt(totalPrice);
                 const discount20 = (totalPriceInt * 20) / 100;
@@ -110,27 +140,58 @@ for (let seat of allSeat) {
                 const updateGrandTotal = totalPriceInt - discount20;
                 setInnerText("grandPrice", updateGrandTotal);
 
+                  //   discountdPrice a append korbo
+                  const discountdPrice = document.getElementById("discountdPrice");
+                  const newDivDis = document.createElement("div");
+                  newDivDis.classList.add('flex');
+                  newDivDis.classList.add('justify-between');
+  
+  
+                  const newP2Dis = document.createElement("p");
+                  newP2Dis.innerText = " Discounted Price";
+                  newDivDis.appendChild(newP2Dis);
+  
+                  const newP1Dis = document.createElement("p");
+                  newP1Dis.innerText = "BDT " + discount20;
+                  newDivDis.appendChild(newP1Dis);
+  
+  
+                  discountedCount++;
+                  if (discountedCount === 4) {
+                      discountdPrice.appendChild(newDivDis)
+                  }
+  
+                  //   discountdPrice a append kora ses
+
                 couponDiv.classList.add('hidden')
             }
-            else{
+            else {
                 invalidCoupon++;
-                if(invalidCoupon === 4){
+                if (invalidCoupon === 4) {
 
                     alert("Invalid Coupon Code !")
-                     document.getElementById("couponInput").value = "";
-                   
+                    document.getElementById("couponInput").value = "";
+
                 }
             }
         })
 
 
-        
 
-        
+
+
     })
 
 
-    
+
 
 }
+
+
+
+// const pageReload = document.getElementById("reloadPage")
+// pageReload.addEventListener("click", function(){
+//     location.reload();
+// })
+
 

@@ -42,66 +42,78 @@
 
         <div class="navbar bg-base-100 mt-14">
             <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-medium text-[#030712B3] text-[18px]">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Destination</a></li>
+                        <li><a href="#">Search</a></li>
+                    </ul>
                 </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-medium text-[#030712B3] text-[18px]">
+                <h2 class="w[144px] h-[42px]  font-extrabold text-[24px] lg:text-[36px] text-[#030712]">P-Ticket</h2>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="font-medium text-[#030712B3] text-[18px] flex gap-[40px] items-center">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Destination</a></li>
                     <li><a href="#">Search</a></li>
                 </ul>
-              </div>
-              <h2 class="w[144px] h-[42px]  font-extrabold text-[24px] lg:text-[36px] text-[#030712]">P-Ticket</h2>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-               <ul class="font-medium text-[#030712B3] text-[18px] flex gap-[40px] items-center">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Destination</a></li>
-                <li><a href="#">Search</a></li>
-            </ul>
             </div>
             <div class="navbar-end">
                 <div
-                class="bg-[#1DD1001A] rounded-[12px] text-[#1DD100] px-[30px] py-[15px] w-[130px] h-[56px] flex items-center gap-[8px]">
-                <p class="text-[20px] font-extrabold ">Bus</p>
-                <svg width="21.500000" height="15.500854" viewBox="0 0 21.5 15.5009" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <desc>
-                        Created with Pixso.
-                    </desc>
-                    <defs />
-                    <path id="Vector"
-                        d="M3.33582 14.165C3.71082 14.5402 4.2196 14.7509 4.75 14.7509C5.2804 14.7509 5.78918 14.5402 6.16418 14.165C6.53931 13.79 6.75 13.2812 6.75 12.7509C6.75 12.2205 6.53931 11.7117 6.16418 11.3367C5.78918 10.9615 5.2804 10.7509 4.75 10.7509C4.2196 10.7509 3.71082 10.9615 3.33582 11.3367C2.96069 11.7117 2.75 12.2205 2.75 12.7509C2.75 13.2812 2.96069 13.79 3.33582 14.165ZM15.3358 14.165C15.7108 14.5402 16.2196 14.7509 16.75 14.7509C17.2804 14.7509 17.7892 14.5402 18.1642 14.165C18.5393 13.79 18.75 13.2812 18.75 12.7509C18.75 12.2205 18.5393 11.7117 18.1642 11.3367C17.7892 10.9615 17.2804 10.7509 16.75 10.7509C16.2196 10.7509 15.7108 10.9615 15.3358 11.3367C14.9607 11.7117 14.75 12.2205 14.75 12.7509C14.75 13.2812 14.9607 13.79 15.3358 14.165ZM2.75 12.7509L0.75 12.7509L0.75 1.75085C0.75 1.4856 0.855347 1.23132 1.04285 1.0437C1.23047 0.856201 1.48474 0.750854 1.75 0.750854L15.75 0.750854C17.076 0.750854 18.3479 1.4884 19.2855 2.80115C20.2233 4.11389 20.75 5.89429 20.75 7.75085L20.75 12.7509L18.75 12.7509M14.75 12.7509L6.75 12.7509M14.75 0.750854L16.25 7.75085L20.75 7.75085M0.75 5.75085L15.75 5.75085M5.75 0.750854L5.75 5.75085M10.75 0.750854L10.75 5.75085"
-                        stroke="#1DD100" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" />
-                </svg>
+                    class="bg-[#1DD1001A] rounded-[12px] text-[#1DD100] px-[30px] py-[15px] w-[130px] h-[56px] flex items-center gap-[8px]">
+                    <p class="text-[20px] font-extrabold ">Bus</p>
+                    <svg width="21.500000" height="15.500854" viewBox="0 0 21.5 15.5009" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                            Created with Pixso.
+                        </desc>
+                        <defs />
+                        <path id="Vector"
+                            d="M3.33582 14.165C3.71082 14.5402 4.2196 14.7509 4.75 14.7509C5.2804 14.7509 5.78918 14.5402 6.16418 14.165C6.53931 13.79 6.75 13.2812 6.75 12.7509C6.75 12.2205 6.53931 11.7117 6.16418 11.3367C5.78918 10.9615 5.2804 10.7509 4.75 10.7509C4.2196 10.7509 3.71082 10.9615 3.33582 11.3367C2.96069 11.7117 2.75 12.2205 2.75 12.7509C2.75 13.2812 2.96069 13.79 3.33582 14.165ZM15.3358 14.165C15.7108 14.5402 16.2196 14.7509 16.75 14.7509C17.2804 14.7509 17.7892 14.5402 18.1642 14.165C18.5393 13.79 18.75 13.2812 18.75 12.7509C18.75 12.2205 18.5393 11.7117 18.1642 11.3367C17.7892 10.9615 17.2804 10.7509 16.75 10.7509C16.2196 10.7509 15.7108 10.9615 15.3358 11.3367C14.9607 11.7117 14.75 12.2205 14.75 12.7509C14.75 13.2812 14.9607 13.79 15.3358 14.165ZM2.75 12.7509L0.75 12.7509L0.75 1.75085C0.75 1.4856 0.855347 1.23132 1.04285 1.0437C1.23047 0.856201 1.48474 0.750854 1.75 0.750854L15.75 0.750854C17.076 0.750854 18.3479 1.4884 19.2855 2.80115C20.2233 4.11389 20.75 5.89429 20.75 7.75085L20.75 12.7509L18.75 12.7509M14.75 12.7509L6.75 12.7509M14.75 0.750854L16.25 7.75085L20.75 7.75085M0.75 5.75085L15.75 5.75085M5.75 0.750854L5.75 5.75085M10.75 0.750854L10.75 5.75085"
+                            stroke="#1DD100" stroke-opacity="1.000000" stroke-width="1.500000"
+                            stroke-linejoin="round" />
+                    </svg>
 
+                </div>
             </div>
-            </div>
-          </div>
-      
+        </div>
+
 
         <!-- Banner section  -->
         <section class="relative">
 
             <div
                 class="bg-[url('./images/banner.png')] w-full h-full lg:h-[590px] bg-no-repeat bg-cover bg-center rounded-[32px] mt-[30px]">
-                <h1 class="text-[36px] lg:text-[64px] font-extrabold text-center text-[#FFFFFF] pt-[70px]">End-to-End Travel with <br>
+                <h1 class="text-[36px] lg:text-[64px] font-extrabold text-center text-[#FFFFFF] pt-[70px]">End-to-End
+                    Travel with <br>
                     <span class=" text-[#1DD100]">P Paribahan</span>
                 </h1>
                 <div class="flex flex-col justify-center items-center ">
-                    <p class="text-[18px] font-normal font-[inter] text-[#FFFFFF] text-center w-[400px] lg:w-[690px] my-[32px]">Secure your seat on the go with convenient travel bus booking. Explore routes, compare fares, and reserve effortlessly for your next adventure.</p>
+                    <p
+                        class="text-[18px] font-normal font-[inter] text-[#FFFFFF] text-center w-[400px] lg:w-[690px] my-[32px]">
+                        Secure your seat on the go with convenient travel bus booking. Explore routes, compare fares,
+                        and reserve effortlessly for your next adventure.</p>
 
-                    <button class="btn btn-success bg-[#1DD100] mb-[30px] lg:mb-[0px] w-[170px] text-[20px] font-extrabold border-none"><a
+                    <button
+                        class="btn btn-success bg-[#1DD100] mb-[30px] lg:mb-[0px] w-[170px] text-[20px] font-extrabold border-none"><a
                             href="#p-poribhon">Buy
                             Ticket</a> </button>
                 </div>
 
             </div>
 
-            <div class="flex flex-col lg:flex-row gap-[32px] justify-evenly items-center relative lg:absolute lg:bottom-[-55px] lg:left-[50px]">
+            <div
+                class="flex flex-col lg:flex-row gap-[32px] justify-evenly items-center relative lg:absolute lg:bottom-[-55px] lg:left-[50px]">
                 <div
                     class="w-[450px] lg:w-[300px] h-[180px] lg:h-[135px] font-[inter] font-[700px] rounded-[24px] bg-[#FFFFFF] border-b-4 border-[#1DD100]  flex gap-[5px] justify-center items-center">
                     <svg width="52.000000" height="52.000000" viewBox="0 0 52 52" fill="none"
@@ -219,7 +231,8 @@
             class="w-full bg-[#F7F8F8] font-[Raleway] mt-[120px] pb-[120px] border-t-2 border-[#1DD100] rounded-3xl">
             <div class=" pt-[100px] pb-[40px]">
                 <h2 class="text-[32px] lg:text-[40px] text-center font-extrabold">P.H Paribahan</h2>
-                <p class="w-[400px] lg:w-[700px] mx-auto text-[18px] text-center text-[#03071299] ">Yes, you can run unit tests and
+                <p class="w-[400px] lg:w-[700px] mx-auto text-[18px] text-center text-[#03071299] ">Yes, you can run
+                    unit tests and
                     view the results directly within the app. The integrated testing features allow for a streamlined .
                 </p>
 
@@ -242,7 +255,8 @@
                                         stroke-linejoin="round" />
                                 </svg>
                                 <div>
-                                    <p class="font-bold text-[20px] lg:text-[32px] text-[#030712]">Greenline Paribahan</p>
+                                    <p class="font-bold text-[20px] lg:text-[32px] text-[#030712]">Greenline Paribahan
+                                    </p>
                                     <p>Coach-009-WEB ! AC_Business</p>
                                 </div>
 
@@ -322,7 +336,8 @@
             </div>
 
             <!-- bus set section  -->
-            <div class=" w-[90%] lg:w-[80%] mx-auto p-[32px] bg-[#FFFFFF] flex justify-between flex-col lg:flex-row rounded-[14px] mt-[26px] ">
+            <div
+                class=" w-[90%] lg:w-[80%] mx-auto p-[32px] bg-[#FFFFFF] flex justify-between flex-col lg:flex-row rounded-[14px] mt-[26px] ">
 
                 <!-- seat left part  -->
                 <div class="w-[100%] lg:w-[50%]">
@@ -519,12 +534,21 @@
 
                         <hr class="my-3">
 
+                        <!-- discountd price -->
+                        <div>
+                            <div id="discountdPrice">
+                                
+                            </div>
+                            <hr class="my-3">
+                        </div>
+
                         <div id="coupon" class="flex justify-between relative">
                             <input id="couponInput" type="text" placeholder="Have any Coupon?"
                                 class="input input-bordered input-md w-full  h-[55px]" />
-                            <button id="couponButtom" class="btn btn-sm text-[16px] font-medium text-[#FFF] bg-[#1DD100] absolute right-2 top-[6px] h-11 w-[80px]"
+                            <button id="couponButtom"
+                                class="btn btn-sm text-[16px] font-medium text-[#FFF] bg-[#1DD100] absolute right-2 top-[6px] h-11 w-[80px]"
                                 disabled>Apply</button>
-                             
+
 
 
                         </div>
@@ -548,6 +572,13 @@
                         <button id="nextButton" onclick="my_modal_1.showModal()"
                             class="btn text-[16px] font-medium text-[#FFF] bg-[#1DD100] my-[24px] w-full p-[14px]"
                             disabled>Next</button>
+
+                       
+
+                            <!-- try for me  -->
+
+                            <!-- try for me  -->
+
 
                         <div class="flex justify-between text-base font-medium text-[#03071299]">
                             <a href="#" class="underline">Terms and Conditions</a>
@@ -575,9 +606,8 @@
 
                 <div class="modal-action ">
                     <form method="dialog">
-                        <!-- if there is a button in form, it will close the modal -->
-                        <button onclick="location.reload()"
-                            class="btn btn-success w-[300px] text-[#FFFFFF] rounded-[32px]">Continue</button>
+                     
+                        <button id="reloadPage" class="btn btn-success w-[300px] text-[#FFFFFF] rounded-[32px]">Continue</button>
                     </form>
                 </div>
             </div>
